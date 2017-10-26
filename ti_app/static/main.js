@@ -99,7 +99,7 @@ $(function() {
                 count = json.count;
 
             // compute the number of pages
-            pages = Math.ceil(count/10);
+            pages = Math.ceil(count/10) || 1;
 
             // create the users table
             $.each(json.results, function(i,user) {
