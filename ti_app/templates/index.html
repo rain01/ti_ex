@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block forms %}
+    <div class="row">
+        <div class="col-sm">
+            <div class="btn-group" data-toggle="buttons" id="form_options">
+                <label class="btn btn-success active">
+                    <input type="radio" name="options" value="GET" id="option_get" autocomplete="off" checked> GET
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" value="POST" id="option_post" autocomplete="off"> POST
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" value="PUT" id="option_put" autocomplete="off"> PUT
+                </label>
+                <label class="btn btn-danger">
+                    <input type="radio" name="options" value="DELETE" id="option_delete" autocomplete="off"> DELETE
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm" id="form_groups">
+            <div class="row" id="form_get">
+                <div class="col-sm">
+                    <form class="crud_forms" id="get_user">
+                        <div class="form-group">
+                            <label for="UserID">User ID</label>
+                            <input type="text" class="form-control" id="UserID" placeholder="Enter User ID" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" id="form_post" style="display: none;">
+                <div class="col-sm">
+                    <form class="crud_forms" id="new_user">
+                        <div class="form-group">
+                            <label for="Email">Username</label>
+                            <input type="text" name="username" class="form-control" id="Username" placeholder="Enter username" value="user">
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email address</label>
+                            <input type="email" name="email" class="form-control" id="Email" placeholder="Enter email" value="user@mail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">First name</label>
+                            <input type="text" name="first_name" class="form-control" id="firstName" placeholder="Enter first name" value="first">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last name</label>
+                            <input type="text" name="last_name" class="form-control" id="lastName" placeholder="Enter last name" value="last">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" id="form_put" style="display: none;">
+                <div class="col-sm">
+                    <form class="crud_forms" id="update_user">
+                        <div class="form-group">
+                            <label for="UserID">User ID</label>
+                            <input type="text" name="userid" class="form-control" id="UserID" placeholder="Enter user ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Username</label>
+                            <input type="text" name="username" class="form-control" id="Username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email address</label>
+                            <input type="email" name="email" class="form-control" id="Email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">First name</label>
+                            <input type="text" name="first_name" class="form-control" id="firstName" placeholder="Enter first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last name</label>
+                            <input type="text" name="last_name" class="form-control" id="lastName" placeholder="Enter last name">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" id="form_delete" style="display: none;">
+                <div class="col-sm">
+                    <form class="crud_forms" id="delete_user">
+                        <div class="form-group">
+                            <label for="UserID">User ID</label>
+                            <input type="text" class="form-control" id="UserID" placeholder="Enter User ID" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <pre id="ajax_response"></pre>
+        </div>
+    </div>
+{% endblock %}

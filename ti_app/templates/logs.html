@@ -1,0 +1,14 @@
+
+{% for log in logs %}
+    <tr>
+        <td>{{ log.id }}</td>
+        <td>{{ log.requested_at }}</td>
+        <td>{{ log.path }}</td>
+        <td>{{ log.view_method }}</td>
+        <td>{{ log.method }}</td>
+        <td>{{ log.status_code }}</td>
+        <td>{{ log.data }}</td>
+        <td>{{ log.response }}</td>
+    </tr>
+{% endfor %}
+
