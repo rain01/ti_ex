@@ -1,4 +1,4 @@
-# Trusted Insight test
+# TI Example
 
 
 # Overview
